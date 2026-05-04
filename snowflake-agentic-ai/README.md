@@ -60,5 +60,37 @@ flowchart TD
 
     G --> H[Streamlit UI Output]
 
+
+---
+
+## ⚙️ Prerequisites
+
+- Python 3.9+
+- Snowflake Account
+- Snowflake Cortex enabled
+- Warehouse access
+- Required role privileges
+
+---
+
+## 🔐 Snowflake Configuration
+
+Ensure the following:
+
+- Database: `AGENTIC_DB`
+- Schema: `BANKING`
+- Warehouse: `COMPUTE_WH` (or your warehouse)
+- Role: `ACCOUNTADMIN` (or equivalent)
+
+---
+
+## 🚀 Setup & Deployment
+
+### Step 1: Clone Repository
+
+```bash
+git clone <your-repo-url>
+cd snowflake-agentic-ai
+
     C --> I[Observability<br/>AGENT_LOGS]
     I --> J[Snowflake Query History]
