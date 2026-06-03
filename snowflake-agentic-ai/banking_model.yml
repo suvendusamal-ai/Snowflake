@@ -1,0 +1,21 @@
+name: banking_model
+
+tables:
+  - name: transactions
+    columns:
+      - name: txn_id
+      - name: account_id
+      - name: amount
+      - name: txn_time
+
+  - name: accounts
+    columns:
+      - name: account_id
+      - name: customer_id
+      - name: balance
+
+  - name: customers
+    columns:
+      - name: customer_id
+      - name: name
+      - name: risk_profile

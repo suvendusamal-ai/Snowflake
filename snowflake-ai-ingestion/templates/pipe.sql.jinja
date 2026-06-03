@@ -1,0 +1,5 @@
+CREATE OR REPLACE PIPE {{ table }}_pipe AS
+COPY INTO {{ table }}
+FROM @{{ stage }}/{{ table }}/
+FILE_FORMAT = (TYPE = PARQUET)
+MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE;

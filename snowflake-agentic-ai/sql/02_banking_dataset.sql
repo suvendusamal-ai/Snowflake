@@ -1,0 +1,73 @@
+USE ROLE ACCOUNTADMIN;
+USE DATABASE AGENTIC_DB;
+USE SCHEMA BANKING;
+
+-- =========================
+-- 1. CUSTOMERS
+-- =========================
+CREATE OR REPLACE TABLE CUSTOMERS (
+    CUSTOMER_ID STRING,
+    NAME STRING,
+    AGE INT,
+    CITY STRING,
+    RISK_PROFILE STRING,
+    KYC_STATUS STRING
+);
+
+INSERT INTO CUSTOMERS VALUES
+('C001','Ravi Kumar',45,'Bangalore','LOW','VERIFIED'),
+('C002','Anita Sharma',52,'Mumbai','MEDIUM','VERIFIED'),
+('C003','John Mathew',38,'Chennai','LOW','VERIFIED'),
+('C004','Farhan Ali',29,'Delhi','HIGH','PENDING'),
+('C005','Suresh Reddy',60,'Hyderabad','HIGH','VERIFIED');
+
+-- =========================
+-- 2. ACCOUNTS
+-- =========================
+CREATE OR REPLACE TABLE ACCOUNTS (
+    ACCOUNT_ID STRING,
+    CUSTOMER_ID STRING,
+    ACCOUNT_TYPE STRING,
+    BALANCE FLOAT
+);
+
+INSERT INTO ACCOUNTS VALUES
+('A001','C001','SAVINGS',150000),
+('A002','C002','CURRENT',500000),
+('A003','C003','SAVINGS',120000),
+('A004','C004','SAVINGS',20000),
+('A005','C005','CURRENT',900000);
+
+-- =========================
+-- 3. TRANSACTIONS
+-- =========================
+CREATE OR REPLACE TABLE TRANSACTIONS (
+    TXN_ID STRING,
+    ACCOUNT_ID STRING,
+    AMOUNT FLOAT,
+    TXN_TYPE STRING,
+    TXN_TIME TIMESTAMP,
+    LOCATION STRING
+);
+
+INSERT INTO TRANSACTIONS VALUES
+('T001','A001',5000,'DEBIT','2026-04-01 10:00:00','Bangalore'),
+('T002','A002',250000,'DEBIT','2026-04-01 11:00:00','Mumbai'),
+('T003','A003',900000,'DEBIT','2026-04-01 12:00:00','Chennai'),
+('T004','A004',15000,'DEBIT','2026-04-01 13:00:00','Delhi'),
+('T005','A005',600000,'DEBIT','2026-04-01 14:00:00','Hyderabad'),
+('T006','A002',300000,'DEBIT','2026-04-02 09:00:00','Dubai'),
+('T007','A005',750000,'DEBIT','2026-04-02 10:00:00','Singapore');
+
+-- =========================
+-- 4. FRAUD RULES (STRUCTURED)
+-- =========================
+CREATE OR REPLACE TABLE FRAUD_RULES (
+    RULE_ID STRING,
+    DESCRIPTION STRING,
+    THRESHOLD FLOAT
+);
+
+INSERT INTO FRAUD_RULES VALUES
+('R001','Transactions above 2 lakh indicate high risk',200000),
+('R002','Foreign transactions above 1 lakh are suspicious',100000);
