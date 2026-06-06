@@ -1,0 +1,42 @@
+name: snowflake_dbt_enterprise_demo
+version: 1.0.0
+config-version: 2
+
+profile: snowflake_dbt_enterprise_demo
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: target
+clean-targets:
+  - target
+  - dbt_packages
+
+vars:
+  high_value_order_threshold: 500
+
+models:
+  snowflake_dbt_enterprise_demo:
+    staging:
+      +materialized: view
+      +schema: staging
+
+    intermediate:
+      +materialized: ephemeral
+
+    marts:
+      +materialized: table
+      +schema: marts
+
+seeds:
+  snowflake_dbt_enterprise_demo:
+    +schema: reference
+    +quote_columns: false
+
+snapshots:
+  snowflake_dbt_enterprise_demo:
+    +target_schema: snapshots
