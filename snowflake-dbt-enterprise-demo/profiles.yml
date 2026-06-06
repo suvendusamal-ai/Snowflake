@@ -1,0 +1,10 @@
+snowflake_dbt_enterprise_demo:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: DBT_DEVELOPER_ROLE
+      warehouse: DBT_DEMO_WH
+      database: DBT_DEMO_DEV
+      schema: DBT_PROJECTS
+      threads: 8
