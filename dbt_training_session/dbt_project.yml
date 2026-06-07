@@ -1,0 +1,51 @@
+name: snowflake_dbt_one_hour_training
+version: 1.0.0
+config-version: 2
+
+profile: snowflake_dbt_one_hour_training
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+docs-paths: ["docs"]
+
+target-path: target
+clean-targets:
+  - target
+  - dbt_packages
+
+vars:
+  high_value_customer_threshold: 1000
+
+models:
+  snowflake_dbt_one_hour_training:
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: ephemeral
+    marts:
+      +schema: marts
+      +materialized: table
+      dimensions:
+        +tags: ["dimensions"]
+      facts:
+        +tags: ["facts"]
+      reporting:
+        +materialized: view
+        +tags: ["reporting"]
+
+seeds:
+  snowflake_dbt_one_hour_training:
+    +schema: reference
+    +quote_columns: false
+
+snapshots:
+  snowflake_dbt_one_hour_training:
+    +target_schema: training_snapshots
