@@ -1,0 +1,13 @@
+version: 2
+
+seeds:
+  - name: segment_targets
+    description: Simple business planning targets versioned with the project.
+    columns:
+      - name: customer_segment
+        tests:
+          - unique
+          - not_null
+      - name: target_revenue
+        tests:
+          - positive_values
