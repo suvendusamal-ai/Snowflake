@@ -1,0 +1,33 @@
+[
+  {
+    "device_id": "sensor-001",
+    "event_type": "temperature_reading",
+    "temperature": 23.5,
+    "humidity": 45.2,
+    "payload": {
+      "battery_pct": 87,
+      "firmware": "v2.1.3"
+    }
+  },
+  {
+    "device_id": "sensor-002",
+    "event_type": "humidity_alert",
+    "temperature": 28.1,
+    "humidity": 92.0,
+    "payload": {
+      "battery_pct": 64,
+      "firmware": "v2.1.1",
+      "alert": true
+    }
+  },
+  {
+    "device_id": "sensor-003",
+    "event_type": "temperature_reading",
+    "temperature": 19.8,
+    "humidity": 55.7,
+    "payload": {
+      "battery_pct": 95,
+      "firmware": "v2.2.0"
+    }
+  }
+]
