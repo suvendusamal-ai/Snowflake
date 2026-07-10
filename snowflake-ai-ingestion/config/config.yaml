@@ -1,0 +1,11 @@
+sqlserver:
+  connection_string: "DRIVER={ODBC Driver 17 for SQL Server};SERVER=CHN5CD3035DPN;DATABASE=DemoDB;Trusted_Connection=yes;"
+
+snowflake:
+  user: "admin"
+  password: "H@ppyN3wY3ar2026"
+  account: "KBQSGRQ-SFB22692"
+  warehouse: "COMPUTE_WH"
+  database: "demodb"
+  schema: "atlas"
+  stage: "CSV_INGEST_STAGE"

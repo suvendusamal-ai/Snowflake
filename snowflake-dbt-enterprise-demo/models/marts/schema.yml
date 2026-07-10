@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Governed customer dimension enriched with order behavior.
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    description: Current analytical product dimension.
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fct_order_items
+    description: Incremental order-line sales fact.
+    columns:
+      - name: order_item_key
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: net_line_amount_usd
+        data_tests:
+          - positive_values
+
+      - name: customer_id
+        data_tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+
+      - name: product_id
+        data_tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+
+  - name: rpt_executive_sales_summary
+    columns:
+      - name: revenue_month
+        data_tests:
+          - unique
+          - not_null
+
+  - name: rpt_segment_performance
+    columns:
+      - name: segment
+        data_tests:
+          - unique
+          - not_null

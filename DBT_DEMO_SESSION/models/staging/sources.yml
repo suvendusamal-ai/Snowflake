@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Compact operational data loaded outside dbt for the workshop.
+    database: "{{ target.database }}"
+    schema: raw
+    loader: sql_bootstrap
+    config:
+      freshness:
+        warn_after: {count: 24, period: hour}
+      loaded_at_field: ingested_at
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            tests:
+              - relationships:
+                  to: source('raw', 'customers')
+                  field: customer_id
+      - name: order_items
+        columns:
+          - name: order_id
+            tests:
+              - relationships:
+                  to: source('raw', 'orders')
+                  field: order_id

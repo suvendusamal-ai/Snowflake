@@ -1,0 +1,45 @@
+version: 2
+
+sources:
+  - name: raw
+    database: DBT_DEMO_DEV
+    schema: RAW
+    description: Source data loaded independently from dbt.
+
+    config:
+      loaded_at_field: INGESTED_AT
+      freshness:
+        warn_after:
+          count: 48
+          period: hour
+        error_after:
+          count: 168
+          period: hour
+
+    tables:
+      - name: customers
+        identifier: CUSTOMERS
+        columns:
+          - name: CUSTOMER_ID
+            data_tests:
+              - unique
+              - not_null
+
+      - name: products
+        identifier: PRODUCTS
+        columns:
+          - name: PRODUCT_ID
+            data_tests:
+              - unique
+              - not_null
+
+      - name: orders
+        identifier: ORDERS
+        columns:
+          - name: ORDER_ID
+            data_tests:
+              - unique
+              - not_null
+
+      - name: order_items
+        identifier: ORDER_ITEMS

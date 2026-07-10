@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: fct_order_items
+    description: >
+      Completed order lines published as the main sales fact.
+      {{ doc('training_architecture') }}
+    columns:
+      - name: order_item_key
+        tests:
+          - unique
+          - not_null
+      - name: line_revenue
+        tests:
+          - positive_values
+
+  - name: dim_customers
+    description: Current customer state plus simple purchase history.
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: rpt_segment_summary
+    description: Revenue by customer segment compared with seed-based targets.
+    columns:
+      - name: customer_segment
+        tests:
+          - unique
+          - not_null
+
+exposures:
+  - name: segment_performance_dashboard
+    label: Segment Performance Dashboard
+    type: dashboard
+    maturity: medium
+    url: https://bi.example.com/segment-performance
+    description: Demo exposure used to show lineage from reporting back to RAW.
+    depends_on:
+      - ref('rpt_segment_summary')
+      - ref('dim_customers')
+    owner:
+      name: Data Engineering
+      email: data-engineering@example.com
