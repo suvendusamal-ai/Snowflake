@@ -1,7 +1,0 @@
-{
-  "account": "YOUR_ORG-YOUR_ACCOUNT",
-  "user": "YOUR_STREAMING_USER",
-  "url": "https://YOUR_ORG-YOUR_ACCOUNT.snowflakecomputing.com:443",
-  "private_key_file": "keys/rsa_key.p8",
-  "role": "STREAMING_ROLE"
-}
