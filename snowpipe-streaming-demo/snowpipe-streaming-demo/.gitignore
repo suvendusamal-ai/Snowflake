@@ -1,0 +1,26 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Snowflake credentials and keys
+profile.json
+keys/*.p8
+keys/*.pem
+keys/*.pub
+
+# Logs and runtime output
+*.log
+logs/
+output/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,26 +1,13 @@
-# Python
-.venv/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# Snowflake credentials and keys
-profile.json
-keys/*.p8
-keys/*.pem
-keys/*.pub
-
-# Logs and runtime output
-*.log
+# dbt generated files
 logs/
-output/
+target/
+dbt_packages/
 
-# IDEs
-.vscode/
-.idea/
+# Python
+__pycache__/
+*.pyc
 
-# OS files
-.DS_Store
-Thumbs.db
+# Environment
+.env
+.venv/
+venv/

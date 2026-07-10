@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+streamlit
+snowflake-connector-python
+snowflake-snowpark-python
+jinja2
+sqlalchemy
+pyodbc
+pandas
+python-dotenv
+requests

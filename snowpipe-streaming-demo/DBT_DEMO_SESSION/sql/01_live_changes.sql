@@ -1,0 +1,23 @@
+-- Section 1: Insert a new completed order to show downstream rebuilds.
+INSERT INTO DBT_TRAINING.RAW.ORDERS
+  (ORDER_ID, CUSTOMER_ID, ORDER_DATE, STATUS, UPDATED_AT)
+VALUES
+  (1006, 2, '2025-03-06', 'COMPLETED', CURRENT_TIMESTAMP());
+
+INSERT INTO DBT_TRAINING.RAW.ORDER_ITEMS
+  (ORDER_ID, LINE_NUMBER, PRODUCT_NAME, QUANTITY, UNIT_PRICE, UPDATED_AT)
+VALUES
+  (1006, 1, 'Analytics Starter', 3, 100.00, CURRENT_TIMESTAMP()),
+  (1006, 2, 'Architecture Workshop', 1, 1200.00, CURRENT_TIMESTAMP());
+
+-- Section 2: Update a mutable customer attribute to demonstrate snapshots.
+UPDATE DBT_TRAINING.RAW.CUSTOMERS
+SET STATUS = 'CHURN_RISK',
+    UPDATED_AT = CURRENT_TIMESTAMP()
+WHERE CUSTOMER_ID = 2;
+
+-- Section 3: Optional teaching failure. Run only if you want to show a test fail.
+UPDATE DBT_TRAINING.RAW.ORDERS
+SET ORDER_DATE = CURRENT_DATE() + 30,
+    UPDATED_AT = CURRENT_TIMESTAMP()
+WHERE ORDER_ID = 1004;

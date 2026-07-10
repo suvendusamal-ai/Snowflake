@@ -1,0 +1,14 @@
+USE ROLE ACCOUNTADMIN;
+
+CREATE DATABASE IF NOT EXISTS STREAMING_DEMO;
+CREATE SCHEMA IF NOT EXISTS STREAMING_DEMO.RAW;
+
+CREATE OR REPLACE TABLE STREAMING_DEMO.RAW.IOT_EVENTS (
+    device_id   STRING,
+    event_type  STRING,
+    temperature FLOAT,
+    humidity    FLOAT,
+    payload     VARIANT,
+    ingested_at TIMESTAMP_LTZ DEFAULT CURRENT_TIMESTAMP()
+)
+COMMENT = 'IoT events ingested by the Snowpipe Streaming Python SDK';

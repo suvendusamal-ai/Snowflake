@@ -1,0 +1,6 @@
+CREATE OR REPLACE TABLE oi_atlas.{{ table_name }}
+(
+{% for c in columns %}
+{{ c.COLUMN_NAME | upper }} {{ c.DATA_TYPE }}{% if not loop.last %},{% endif %}
+{% endfor %}
+);

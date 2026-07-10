@@ -1,0 +1,8 @@
+target/
+logs/
+dbt_packages/
+.venv/
+.local_profiles/
+profiles.local.yml
+*.pyc
+__pycache__/

@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+pyodbc
+snowflake-connector-python
+jinja2
+pyarrow
+openai
+python-dotenv

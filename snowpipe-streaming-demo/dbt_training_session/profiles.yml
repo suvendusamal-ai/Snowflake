@@ -1,0 +1,14 @@
+snowflake_dbt_one_hour_training:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: workspace
+      user: workspace
+      password: workspace
+      role: DBT_TRAINING_ROLE
+      database: DBT_TRAINING
+      warehouse: DBT_TRAINING_WH
+      schema: TRAINING
+      threads: 4
+      client_session_keep_alive: false

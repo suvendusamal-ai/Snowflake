@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - JWT_SECRET_KEY
+      - JWT_ALGORITHM
+      - JWT_AUDIENCE
+      - JWT_ISSUER
+      - SNOWFLAKE_USER
+      - SNOWFLAKE_PASSWORD
+      - SNOWFLAKE_ACCOUNT
+      - SNOWFLAKE_WAREHOUSE
+      - SNOWFLAKE_DATABASE
+      - SNOWFLAKE_SCHEMA
+      - SNOWFLAKE_ROLE
+      - SNOWFLAKE_STAGE_NAME
+      - SNOWFLAKE_FILE_FORMAT
+      - SNOWFLAKE_TRANSFORM_PROCEDURE
+    env_file:
+      - .env

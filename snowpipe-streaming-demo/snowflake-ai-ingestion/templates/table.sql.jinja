@@ -1,0 +1,10 @@
+CREATE OR REPLACE TABLE {{ table }}
+USING TEMPLATE (
+  SELECT ARRAY_AGG(OBJECT_CONSTRUCT(*))
+  FROM TABLE(
+    INFER_SCHEMA(
+      LOCATION => '@{{ stage }}/{{ table }}/',
+      FILE_FORMAT => 'PARQUET_FORMAT'
+    )
+  )
+);
