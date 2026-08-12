@@ -1,0 +1,82 @@
+platform:
+  name: "Enterprise AI Knowledge Platform"
+  version: "1.0.0"
+  database: "CORTEX_AI_PLATFORM"
+
+schemas:
+  - RAW
+  - PROCESSED
+  - KNOWLEDGE
+  - AGENT
+  - GOVERNANCE
+  - OBSERVABILITY
+
+departments:
+  - id: finance
+    display_name: "Finance"
+    stage: FINANCE_DOCS
+    role: CORTEX_AI_FINANCE
+  - id: treasury
+    display_name: "Treasury"
+    stage: TREASURY_DOCS
+    role: CORTEX_AI_TREASURY
+  - id: procurement
+    display_name: "Procurement"
+    stage: PROCUREMENT_DOCS
+    role: CORTEX_AI_PROCUREMENT
+  - id: risk
+    display_name: "Risk"
+    stage: RISK_DOCS
+    role: CORTEX_AI_RISK
+  - id: compliance
+    display_name: "Compliance"
+    stage: COMPLIANCE_DOCS
+    role: CORTEX_AI_COMPLIANCE
+  - id: audit
+    display_name: "Audit"
+    stage: AUDIT_DOCS
+    role: CORTEX_AI_AUDIT
+  - id: hr
+    display_name: "Human Resources"
+    stage: HR_DOCS
+    role: CORTEX_AI_HR
+  - id: legal
+    display_name: "Legal"
+    stage: LEGAL_DOCS
+    role: CORTEX_AI_LEGAL
+  - id: operations
+    display_name: "Operations"
+    stage: OPERATIONS_DOCS
+    role: CORTEX_AI_OPERATIONS
+
+supported_file_types:
+  - extension: ".pdf"
+    mime_type: "application/pdf"
+    parser: "ai_parse_document"
+  - extension: ".docx"
+    mime_type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    parser: "ai_parse_document"
+  - extension: ".xlsx"
+    mime_type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    parser: "ai_parse_document"
+  - extension: ".pptx"
+    mime_type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    parser: "ai_parse_document"
+  - extension: ".csv"
+    mime_type: "text/csv"
+    parser: "structured_parser"
+  - extension: ".json"
+    mime_type: "application/json"
+    parser: "structured_parser"
+  - extension: ".html"
+    mime_type: "text/html"
+    parser: "ai_parse_document"
+  - extension: ".txt"
+    mime_type: "text/plain"
+    parser: "text_parser"
+  - extension: ".png"
+    mime_type: "image/png"
+    parser: "ocr_parser"
+  - extension: ".jpg"
+    mime_type: "image/jpeg"
+    parser: "ocr_parser"

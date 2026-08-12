@@ -1,0 +1,29 @@
+ANNUAL BUDGET PLAN - FISCAL YEAR 2025
+
+BUDGET OVERVIEW
+Total planned expenditure: $9.2 billion
+Revenue target: $12.5 billion
+Planned operating margin: 24.0%
+
+DEPARTMENT ALLOCATIONS
+1. Engineering & Product: $2.8B (30.4% of budget)
+2. Sales & Marketing: $2.1B (22.8% of budget)
+3. Operations: $1.6B (17.4% of budget)
+4. General & Administrative: $0.9B (9.8% of budget)
+5. Research & Development: $1.8B (19.6% of budget)
+
+KEY INVESTMENTS
+- AI/ML Infrastructure: $450M (new initiative)
+- Data Center Expansion: $320M (Asia-Pacific region)
+- Talent Acquisition: $180M (2,500 new hires planned)
+- Security & Compliance: $95M (+25% vs FY2024)
+
+BUDGET GOVERNANCE
+- Monthly variance reviews with department heads
+- Quarterly reforecasting cycles
+- 5% contingency reserve ($460M) for unplanned needs
+- All expenditures over $5M require CFO approval
+
+Account Code: BUDGET-2025-MASTER
+Approval Authority: Board of Directors
+Review Cycle: Quarterly

@@ -1,0 +1,50 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+AGREEMENT DATE: [Date]
+AGREEMENT ID: NDA-2024-[Number]
+
+PARTIES:
+1. [Company Name], a Delaware corporation ("Disclosing Party")
+2. [Counterparty Name], a [State/Country] [entity type] ("Receiving Party")
+
+RECITALS
+The parties wish to explore a potential business relationship and in connection
+therewith may disclose certain confidential and proprietary information.
+
+1. DEFINITION OF CONFIDENTIAL INFORMATION
+"Confidential Information" means any information disclosed by either party that is:
+(a) marked as confidential or proprietary;
+(b) identified as confidential at time of disclosure;
+(c) reasonably understood to be confidential given nature and circumstances.
+
+Exclusions:
+(i) Information publicly available through no fault of receiving party
+(ii) Information known to receiving party prior to disclosure
+(iii) Information independently developed without use of confidential information
+(iv) Information received from a third party without restriction
+
+2. OBLIGATIONS
+The Receiving Party shall:
+- Use Confidential Information solely for evaluating the potential relationship
+- Restrict access to personnel with need-to-know
+- Apply no less than reasonable care (and no less than it applies to its own)
+- Not reverse engineer, decompile, or disassemble
+
+3. TERM
+- Disclosure period: 2 years from Agreement Date
+- Confidentiality obligation: 5 years from date of disclosure
+- Trade secrets: protected indefinitely
+
+4. RETURN/DESTRUCTION
+Upon written request or termination, receiving party shall return or destroy
+all Confidential Information within 30 days and certify destruction in writing.
+
+5. GOVERNING LAW
+This Agreement shall be governed by the laws of the State of Delaware.
+
+Agreement Type: Mutual NDA
+Parties: Bilateral
+Effective Date: [Date]
+Expiration Date: [Date + 2 years]
+Jurisdiction: Delaware
+Governing Law: Delaware

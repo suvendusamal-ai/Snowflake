@@ -1,0 +1,57 @@
+validators:
+  groundedness:
+    enabled: true
+    model: "claude-3-5-haiku"
+    threshold: 0.8
+    prompt_template: "groundedness_check"
+
+  hallucination:
+    enabled: true
+    model: "claude-3-5-haiku"
+    max_claims_to_verify: 10
+
+  citation:
+    enabled: true
+    require_source_reference: true
+    min_citations_per_response: 1
+
+  pii:
+    enabled: true
+    patterns:
+      - type: "ssn"
+        regex: '\b\d{3}-\d{2}-\d{4}\b'
+        action: "mask"
+      - type: "email"
+        regex: '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+        action: "mask"
+      - type: "phone"
+        regex: '\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'
+        action: "mask"
+      - type: "credit_card"
+        regex: '\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b'
+        action: "redact"
+
+  toxicity:
+    enabled: true
+    model: "claude-3-5-haiku"
+    categories:
+      - "hate_speech"
+      - "harassment"
+      - "self_harm"
+      - "violence"
+
+  output_length:
+    enabled: true
+    max_tokens: 4096
+    truncation_strategy: "sentence_boundary"
+
+injection_detection:
+  enabled: true
+  model: "claude-3-5-haiku"
+  patterns:
+    - "ignore previous instructions"
+    - "disregard above"
+    - "system prompt"
+    - "reveal your instructions"
+    - "override safety"
+  score_threshold: 0.8

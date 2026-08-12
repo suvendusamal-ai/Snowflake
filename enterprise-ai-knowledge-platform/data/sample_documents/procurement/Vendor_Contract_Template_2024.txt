@@ -1,0 +1,49 @@
+MASTER SERVICE AGREEMENT - TEMPLATE
+
+CONTRACT REFERENCE: MSA-2024-TEMPLATE
+VERSION: 3.2
+EFFECTIVE DATE: [Date]
+
+PARTIES:
+- Buyer: [Company Name] ("Company")
+- Vendor: [Vendor Name] ("Supplier")
+
+1. SCOPE OF SERVICES
+The Supplier shall provide the services described in Exhibit A attached hereto,
+in accordance with the service levels defined in Exhibit B.
+
+2. TERM AND TERMINATION
+- Initial term: 36 months from Effective Date
+- Auto-renewal: 12-month periods unless terminated with 90 days notice
+- Termination for cause: 30 days written notice with cure period
+- Termination for convenience: 60 days written notice
+
+3. PRICING AND PAYMENT
+- Pricing per Exhibit C (Rate Card)
+- Payment terms: Net 45 from invoice date
+- Annual price increase cap: CPI + 2%
+- Volume discounts per Exhibit C
+
+4. SERVICE LEVEL AGREEMENTS
+- System availability: 99.95% monthly
+- Response time (P1): 15 minutes
+- Resolution time (P1): 4 hours
+- Service credits: 2% per 0.01% below target
+
+5. DATA PROTECTION
+- Supplier shall comply with Company's Data Protection Policy
+- Annual SOC 2 Type II report required
+- Right to audit with 30 days notice
+- Data residency: United States and EU only
+
+6. INSURANCE REQUIREMENTS
+- General liability: $5M per occurrence
+- Professional liability: $10M aggregate
+- Cyber liability: $5M per occurrence
+
+Vendor Name: [Template]
+Contract Value: [Variable]
+Contract Start Date: [Date]
+Contract End Date: [Date + 36 months]
+Payment Terms: Net 45
+Category: Professional Services

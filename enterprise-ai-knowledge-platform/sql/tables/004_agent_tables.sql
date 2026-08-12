@@ -1,0 +1,91 @@
+-- ============================================================================
+-- Enterprise AI Knowledge Platform
+-- AGENT Schema Tables
+-- ============================================================================
+
+USE ROLE CORTEX_AI_ADMIN;
+USE DATABASE CORTEX_AI_PLATFORM;
+USE SCHEMA AGENT;
+
+-- Conversation sessions
+CREATE TABLE IF NOT EXISTS CONVERSATIONS (
+    CONVERSATION_ID     VARCHAR(50) NOT NULL DEFAULT UUID_STRING(),
+    USER_ID             VARCHAR(200) NOT NULL,
+    USER_ROLE           VARCHAR(100),
+    DEPARTMENT          VARCHAR(50),
+    TITLE               VARCHAR(500),
+    STARTED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    LAST_ACTIVITY_AT    TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    MESSAGE_COUNT       NUMBER(5) DEFAULT 0,
+    STATUS              VARCHAR(20) DEFAULT 'ACTIVE',
+    METADATA            VARIANT,
+    CONSTRAINT PK_CONVERSATIONS PRIMARY KEY (CONVERSATION_ID)
+)
+COMMENT = 'Chat conversation sessions per user';
+
+-- Individual messages within conversations
+CREATE TABLE IF NOT EXISTS CONVERSATION_MESSAGES (
+    MESSAGE_ID          VARCHAR(50) NOT NULL DEFAULT UUID_STRING(),
+    CONVERSATION_ID     VARCHAR(50) NOT NULL,
+    ROLE                VARCHAR(20) NOT NULL,
+    CONTENT             VARCHAR(16777216) NOT NULL,
+    CITATIONS           ARRAY,
+    TOOL_CALLS          ARRAY,
+    TOKEN_COUNT         NUMBER(10),
+    LATENCY_MS          NUMBER(10),
+    MODEL               VARCHAR(100),
+    CREATED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    CONSTRAINT PK_CONVERSATION_MESSAGES PRIMARY KEY (MESSAGE_ID),
+    CONSTRAINT FK_MSG_CONVERSATION FOREIGN KEY (CONVERSATION_ID)
+        REFERENCES CONVERSATIONS(CONVERSATION_ID)
+)
+COMMENT = 'Individual messages within conversations (user, assistant, system, tool)';
+
+-- Tool registry: defines available tools for the agent
+CREATE TABLE IF NOT EXISTS TOOL_REGISTRY (
+    TOOL_ID             VARCHAR(50) NOT NULL DEFAULT UUID_STRING(),
+    TOOL_NAME           VARCHAR(100) NOT NULL,
+    TOOL_TYPE           VARCHAR(50) NOT NULL,
+    DESCRIPTION         VARCHAR(2000) NOT NULL,
+    PARAMETERS_SCHEMA   VARIANT,
+    SQL_FUNCTION_NAME   VARCHAR(500),
+    IS_ENABLED          BOOLEAN DEFAULT TRUE,
+    REQUIRES_DEPARTMENT BOOLEAN DEFAULT FALSE,
+    CREATED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    UPDATED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    CONSTRAINT PK_TOOL_REGISTRY PRIMARY KEY (TOOL_ID)
+)
+COMMENT = 'Registry of tools available to the Cortex Agent';
+
+-- Prompt versions (production prompt management)
+CREATE TABLE IF NOT EXISTS PROMPT_VERSIONS (
+    PROMPT_ID           VARCHAR(50) NOT NULL DEFAULT UUID_STRING(),
+    PROMPT_NAME         VARCHAR(100) NOT NULL,
+    VERSION             VARCHAR(20) NOT NULL,
+    TEMPLATE            VARCHAR(16777216) NOT NULL,
+    DESCRIPTION         VARCHAR(2000),
+    IS_ACTIVE           BOOLEAN DEFAULT FALSE,
+    CREATED_BY          VARCHAR(200),
+    CREATED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    ACTIVATED_AT        TIMESTAMP_NTZ,
+    CONSTRAINT PK_PROMPT_VERSIONS PRIMARY KEY (PROMPT_ID)
+)
+COMMENT = 'Versioned prompt templates with activation tracking';
+
+-- Agent execution traces (detailed step-by-step log)
+CREATE TABLE IF NOT EXISTS AGENT_TRACES (
+    TRACE_ID            VARCHAR(50) NOT NULL DEFAULT UUID_STRING(),
+    CONVERSATION_ID     VARCHAR(50),
+    MESSAGE_ID          VARCHAR(50),
+    STEP_INDEX          NUMBER(3),
+    STEP_TYPE           VARCHAR(50) NOT NULL,
+    STEP_INPUT          VARIANT,
+    STEP_OUTPUT         VARIANT,
+    DURATION_MS         NUMBER(10),
+    TOKENS_USED         NUMBER(10),
+    MODEL               VARCHAR(100),
+    STATUS              VARCHAR(20),
+    CREATED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    CONSTRAINT PK_AGENT_TRACES PRIMARY KEY (TRACE_ID)
+)
+COMMENT = 'Detailed execution traces for agent reasoning steps';

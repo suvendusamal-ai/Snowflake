@@ -1,0 +1,58 @@
+ENTERPRISE RISK REGISTER - Q4 2024
+
+RISK ID: ERM-001
+CATEGORY: Operational
+RISK: Major data center outage affecting multiple regions
+LIKELIHOOD: Medium (3/5)
+IMPACT: High (4/5)
+RISK SCORE: 12/25
+MITIGATION: Multi-region failover, 99.99% SLA with providers
+RISK OWNER: VP Infrastructure
+ASSESSMENT DATE: December 15, 2024
+STATUS: Monitored - controls in place
+
+---
+
+RISK ID: ERM-002
+CATEGORY: Cybersecurity
+RISK: Ransomware attack on critical systems
+LIKELIHOOD: Medium-High (3.5/5)
+IMPACT: Critical (5/5)
+RISK SCORE: 17.5/25
+MITIGATION: Zero-trust architecture, 24/7 SOC, immutable backups, tabletop exercises quarterly
+RISK OWNER: CISO
+ASSESSMENT DATE: December 15, 2024
+STATUS: Active mitigation - enhanced monitoring deployed
+
+---
+
+RISK ID: ERM-003
+CATEGORY: Regulatory
+RISK: Non-compliance with emerging AI regulations (EU AI Act)
+LIKELIHOOD: Medium (3/5)
+IMPACT: High (4/5)
+RISK SCORE: 12/25
+MITIGATION: AI governance framework, legal review of all AI deployments, model risk management
+RISK OWNER: Chief Legal Officer
+ASSESSMENT DATE: December 15, 2024
+STATUS: Active - governance framework under development
+
+---
+
+RISK ID: ERM-004
+CATEGORY: Financial
+RISK: FX exposure from international revenue (EUR, GBP, JPY)
+LIKELIHOOD: High (4/5)
+IMPACT: Medium (3/5)
+RISK SCORE: 12/25
+MITIGATION: Natural hedging + forward contracts for exposures > $10M
+RISK OWNER: Treasurer
+ASSESSMENT DATE: December 15, 2024
+STATUS: Controlled - hedging program active
+
+Risk Category: Enterprise
+Likelihood: Variable
+Impact Level: Variable
+Mitigation Status: Active
+Risk Owner: Multiple
+Assessment Date: 2024-12-15

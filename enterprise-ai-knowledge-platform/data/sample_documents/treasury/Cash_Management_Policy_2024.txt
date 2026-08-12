@@ -1,0 +1,40 @@
+CORPORATE CASH MANAGEMENT POLICY
+
+EFFECTIVE DATE: January 1, 2024
+POLICY OWNER: Treasury Department
+REVIEW FREQUENCY: Annual
+
+1. LIQUIDITY REQUIREMENTS
+- Minimum cash reserve: $500M across all accounts
+- Maximum single-bank concentration: 25% of total cash
+- Operating cash buffer: 3 months of operating expenses
+
+2. INVESTMENT POLICY
+Permitted instruments:
+- US Treasury Securities (no maturity limit)
+- Investment-grade corporate bonds (max 5-year maturity)
+- Money market funds (SEC-registered only)
+- Commercial paper (A-1/P-1 rated, max 90-day maturity)
+
+Prohibited investments:
+- Equities or equity derivatives
+- Structured products
+- Below investment-grade securities
+- Cryptocurrency or digital assets
+
+3. FOREIGN EXCHANGE MANAGEMENT
+- Natural hedging preferred for predictable flows
+- Forward contracts permitted for exposures > $10M
+- Options permitted with CFO pre-approval
+- Maximum hedge tenor: 12 months
+- Counterparty credit rating minimum: A-
+
+4. BANKING RELATIONSHIPS
+Primary banks: JP Morgan, Bank of America, Citigroup
+Secondary banks: Wells Fargo, HSBC
+All banks must maintain minimum rating of A+.
+
+Instrument Type: Policy Document
+Currency: Multi-currency (USD primary)
+Interest Rate: Variable based on instrument
+Counterparty: Multiple

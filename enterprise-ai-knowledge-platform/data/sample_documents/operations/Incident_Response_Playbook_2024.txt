@@ -1,0 +1,52 @@
+INCIDENT RESPONSE PLAYBOOK - VERSION 4.0
+
+EFFECTIVE DATE: October 1, 2024
+OWNER: VP Operations
+SLA TARGET: P1 incidents resolved within 4 hours
+
+1. INCIDENT CLASSIFICATION
+
+Priority 1 (Critical):
+- Complete service outage affecting >50% of users
+- Data breach confirmed
+- Revenue-impacting system failure
+- Response time: 15 minutes
+- Resolution target: 4 hours
+
+Priority 2 (High):
+- Partial service degradation affecting >20% of users
+- Security vulnerability actively exploited
+- Single region failure with no failover
+- Response time: 30 minutes
+- Resolution target: 8 hours
+
+Priority 3 (Medium):
+- Performance degradation affecting <20% of users
+- Non-critical system failure
+- Response time: 2 hours
+- Resolution target: 24 hours
+
+2. ESCALATION PATH
+- L1 (NOC): Initial triage and classification
+- L2 (Engineering): Technical investigation and fix
+- L3 (Architecture): Complex multi-system issues
+- Executive: P1 incidents exceeding 2-hour mark
+
+3. COMMUNICATION PROTOCOL
+- Internal: Slack #incident-response channel
+- Stakeholders: Email every 30 minutes for P1
+- Customers: Status page update within 15 minutes
+- Post-mortem: Within 5 business days of resolution
+
+4. POST-INCIDENT REVIEW
+Required for all P1 and P2 incidents:
+- Timeline reconstruction
+- Root cause analysis (5 Whys)
+- Action items with owners and deadlines
+- Process improvement recommendations
+
+Process Name: Incident Management
+SLA Target: 4 hours (P1)
+Frequency: Continuous
+Responsible Team: Operations / SRE
+Last Review Date: 2024-10-01

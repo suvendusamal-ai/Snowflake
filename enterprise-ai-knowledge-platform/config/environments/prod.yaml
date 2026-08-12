@@ -1,0 +1,65 @@
+environment: prod
+
+snowflake:
+  account: "${SNOWFLAKE_ACCOUNT}"
+  user: "${SNOWFLAKE_USER}"
+  role: "CORTEX_AI_ADMIN"
+  warehouse: "CORTEX_AI_INGESTION_WH"
+  database: "CORTEX_AI_PLATFORM"
+
+warehouses:
+  ingestion:
+    name: "CORTEX_AI_INGESTION_WH"
+    size: "MEDIUM"
+    auto_suspend: 60
+    min_cluster_count: 1
+    max_cluster_count: 3
+  search:
+    name: "CORTEX_AI_SEARCH_WH"
+    size: "SMALL"
+    auto_suspend: 60
+  analytics:
+    name: "CORTEX_AI_ANALYTICS_WH"
+    size: "SMALL"
+    auto_suspend: 120
+  streamlit:
+    name: "CORTEX_AI_STREAMLIT_WH"
+    size: "SMALL"
+    auto_suspend: 60
+
+document_intelligence:
+  max_file_size_mb: 100
+  parse_timeout_seconds: 600
+  ocr_enabled: true
+  classification_model: "claude-3-5-haiku"
+  batch_size: 50
+
+knowledge_repository:
+  embedding_model: "snowflake-arctic-embed-l-v2.0"
+  embedding_dimensions: 1024
+  chunk_size: 1500
+  chunk_overlap: 200
+  chunking_strategy: "semantic"
+  cortex_search_service: "ENTERPRISE_KNOWLEDGE_SEARCH"
+  search_columns: ["chunk_text"]
+  max_search_results: 15
+
+agent:
+  model: "claude-3-5-sonnet"
+  max_tokens: 4096
+  temperature: 0.0
+  max_retries: 3
+  conversation_memory_limit: 30
+
+guardrails:
+  groundedness_threshold: 0.8
+  confidence_threshold: 0.7
+  max_output_tokens: 4096
+  pii_detection_enabled: true
+  toxicity_detection_enabled: true
+
+observability:
+  token_tracking_enabled: true
+  latency_tracking_enabled: true
+  cost_tracking_enabled: true
+  trace_retention_days: 365

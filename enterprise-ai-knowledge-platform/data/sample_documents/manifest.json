@@ -1,0 +1,62 @@
+[
+  {
+    "department": "finance",
+    "filename": "Q4_2024_Financial_Report.txt",
+    "path": "finance/Q4_2024_Financial_Report.txt",
+    "size_chars": 1270
+  },
+  {
+    "department": "finance",
+    "filename": "Annual_Budget_FY2025.txt",
+    "path": "finance/Annual_Budget_FY2025.txt",
+    "size_chars": 937
+  },
+  {
+    "department": "treasury",
+    "filename": "Cash_Management_Policy_2024.txt",
+    "path": "treasury/Cash_Management_Policy_2024.txt",
+    "size_chars": 1259
+  },
+  {
+    "department": "procurement",
+    "filename": "Vendor_Contract_Template_2024.txt",
+    "path": "procurement/Vendor_Contract_Template_2024.txt",
+    "size_chars": 1487
+  },
+  {
+    "department": "risk",
+    "filename": "Enterprise_Risk_Register_Q4_2024.txt",
+    "path": "risk/Enterprise_Risk_Register_Q4_2024.txt",
+    "size_chars": 1597
+  },
+  {
+    "department": "compliance",
+    "filename": "SOX_Compliance_Report_2024.txt",
+    "path": "compliance/SOX_Compliance_Report_2024.txt",
+    "size_chars": 1599
+  },
+  {
+    "department": "audit",
+    "filename": "Internal_Audit_IT_Security_2024.txt",
+    "path": "audit/Internal_Audit_IT_Security_2024.txt",
+    "size_chars": 1723
+  },
+  {
+    "department": "hr",
+    "filename": "Employee_Benefits_Policy_2025.txt",
+    "path": "hr/Employee_Benefits_Policy_2025.txt",
+    "size_chars": 1536
+  },
+  {
+    "department": "legal",
+    "filename": "NDA_Standard_Template_2024.txt",
+    "path": "legal/NDA_Standard_Template_2024.txt",
+    "size_chars": 1874
+  },
+  {
+    "department": "operations",
+    "filename": "Incident_Response_Playbook_2024.txt",
+    "path": "operations/Incident_Response_Playbook_2024.txt",
+    "size_chars": 1515
+  }
+]

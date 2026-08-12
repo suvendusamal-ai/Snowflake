@@ -1,0 +1,43 @@
+SARBANES-OXLEY COMPLIANCE REPORT - FISCAL YEAR 2024
+
+REPORT DATE: March 15, 2025
+PREPARED BY: Internal Controls & Compliance Team
+REVIEWED BY: External Auditor (Deloitte)
+
+EXECUTIVE SUMMARY
+The company maintained effective internal controls over financial reporting (ICFR)
+throughout fiscal year 2024. No material weaknesses were identified. Two significant
+deficiencies were noted and remediated during the year.
+
+CONTROL ENVIRONMENT ASSESSMENT
+Total controls tested: 342
+Controls operating effectively: 337 (98.5%)
+Deficiencies identified: 5
+- Material weaknesses: 0
+- Significant deficiencies: 2 (both remediated)
+- Control deficiencies: 3 (accepted risk)
+
+KEY FINDINGS
+
+Finding 1: Access Review Timeliness (Significant Deficiency - REMEDIATED)
+- Quarterly access reviews for financial systems completed late in Q2
+- Root cause: Manual review process overwhelmed by headcount growth
+- Remediation: Automated access certification tool deployed in Q3
+- Status: Verified remediated in Q4 testing
+
+Finding 2: Journal Entry Approval (Significant Deficiency - REMEDIATED)
+- 3% of journal entries over $1M lacked secondary approval in Q1
+- Root cause: System configuration gap after ERP upgrade
+- Remediation: Approval workflow reconfigured with hard stop
+- Status: Verified remediated in Q2 testing
+
+MANAGEMENT ASSERTION
+Management asserts that internal controls over financial reporting were effective
+as of December 31, 2024.
+
+Regulation: SOX Section 404
+Compliance Status: Compliant
+Review Date: 2025-03-15
+Next Review Date: 2026-03-15
+Responsible Officer: Chief Compliance Officer
+Finding Count: 5

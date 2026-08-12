@@ -1,0 +1,78 @@
+-- ============================================================================
+-- Enterprise AI Knowledge Platform
+-- OBSERVABILITY Schema Tables
+-- ============================================================================
+
+USE ROLE CORTEX_AI_ADMIN;
+USE DATABASE CORTEX_AI_PLATFORM;
+USE SCHEMA OBSERVABILITY;
+
+-- Token usage tracking per model invocation
+CREATE TABLE IF NOT EXISTS TOKEN_USAGE (
+    USAGE_ID            VARCHAR(50) NOT NULL DEFAULT UUID_STRING(),
+    CONVERSATION_ID     VARCHAR(50),
+    USER_ID             VARCHAR(200),
+    MODEL               VARCHAR(100) NOT NULL,
+    INPUT_TOKENS        NUMBER(10),
+    OUTPUT_TOKENS       NUMBER(10),
+    TOTAL_TOKENS        NUMBER(10),
+    OPERATION_TYPE      VARCHAR(50),
+    DEPARTMENT          VARCHAR(50),
+    CREATED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    CONSTRAINT PK_TOKEN_USAGE PRIMARY KEY (USAGE_ID)
+)
+COMMENT = 'Token usage per model invocation for cost tracking';
+
+-- Search diagnostics: query performance and relevance
+CREATE TABLE IF NOT EXISTS SEARCH_DIAGNOSTICS (
+    DIAGNOSTIC_ID       VARCHAR(50) NOT NULL DEFAULT UUID_STRING(),
+    QUERY_TEXT          VARCHAR(5000),
+    SEARCH_SERVICE      VARCHAR(200),
+    RESULT_COUNT        NUMBER(5),
+    TOP_SCORE           FLOAT,
+    AVG_SCORE           FLOAT,
+    LATENCY_MS          NUMBER(10),
+    FILTERS_APPLIED     VARIANT,
+    USER_ID             VARCHAR(200),
+    CREATED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    CONSTRAINT PK_SEARCH_DIAGNOSTICS PRIMARY KEY (DIAGNOSTIC_ID)
+)
+COMMENT = 'Search query performance and relevance diagnostics';
+
+-- API latency metrics
+CREATE TABLE IF NOT EXISTS LATENCY_METRICS (
+    METRIC_ID           VARCHAR(50) NOT NULL DEFAULT UUID_STRING(),
+    ENDPOINT            VARCHAR(200) NOT NULL,
+    METHOD              VARCHAR(10),
+    STATUS_CODE         NUMBER(3),
+    LATENCY_MS          NUMBER(10),
+    USER_ID             VARCHAR(200),
+    REQUEST_SIZE_BYTES  NUMBER(10),
+    RESPONSE_SIZE_BYTES NUMBER(10),
+    CREATED_AT          TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+    CONSTRAINT PK_LATENCY_METRICS PRIMARY KEY (METRIC_ID)
+)
+COMMENT = 'API endpoint latency and throughput metrics';
+
+-- Dynamic table: Cost aggregation (hourly rollup)
+CREATE OR REPLACE DYNAMIC TABLE OBSERVABILITY.COST_AGGREGATION
+    TARGET_LAG = '1 hour'
+    WAREHOUSE = CORTEX_AI_ANALYTICS_WH
+AS
+SELECT
+    DATE_TRUNC('HOUR', CREATED_AT) AS HOUR_BUCKET,
+    MODEL,
+    OPERATION_TYPE,
+    DEPARTMENT,
+    COUNT(*) AS INVOCATION_COUNT,
+    SUM(INPUT_TOKENS) AS TOTAL_INPUT_TOKENS,
+    SUM(OUTPUT_TOKENS) AS TOTAL_OUTPUT_TOKENS,
+    SUM(TOTAL_TOKENS) AS TOTAL_TOKENS,
+    -- Estimated cost (per 1M tokens, approximate pricing)
+    SUM(TOTAL_TOKENS) / 1000000.0 * 3.0 AS ESTIMATED_COST_USD
+FROM OBSERVABILITY.TOKEN_USAGE
+GROUP BY
+    DATE_TRUNC('HOUR', CREATED_AT),
+    MODEL,
+    OPERATION_TYPE,
+    DEPARTMENT;

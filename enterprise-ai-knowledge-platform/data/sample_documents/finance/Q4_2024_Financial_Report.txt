@@ -1,0 +1,33 @@
+QUARTERLY FINANCIAL REPORT - Q4 2024
+
+EXECUTIVE SUMMARY
+Total revenue for Q4 2024 reached $2.87 billion, representing a 12.3% year-over-year increase.
+Operating margin improved to 23.4%, up from 21.1% in Q4 2023. Net income attributable to
+shareholders was $485 million, or $3.42 per diluted share.
+
+REVENUE BREAKDOWN BY SEGMENT
+- Enterprise Solutions: $1.42B (+15.2% YoY)
+- Cloud Services: $890M (+18.7% YoY)
+- Professional Services: $560M (+4.1% YoY)
+
+OPERATING EXPENSES
+Total operating expenses were $2.19B, representing 76.6% of revenue.
+- Cost of Revenue: $1.21B (42.2% of revenue)
+- Research & Development: $412M (14.4% of revenue)
+- Sales & Marketing: $387M (13.5% of revenue)
+- General & Administrative: $184M (6.4% of revenue)
+
+CASH FLOW
+Operating cash flow was $612M. Free cash flow reached $487M after capital expenditures
+of $125M. The company returned $200M to shareholders through dividends and $150M through
+share repurchases.
+
+OUTLOOK FOR Q1 2025
+Management expects revenue in the range of $2.95B to $3.05B, with operating margin
+between 23.0% and 24.0%. Capital expenditure is expected to increase to $150M to support
+cloud infrastructure expansion.
+
+Prepared by: Finance Division
+Fiscal Year: 2024
+Cost Center: CC-1000
+Approval Status: Approved by CFO

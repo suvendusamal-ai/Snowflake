@@ -1,0 +1,60 @@
+templates:
+  system_prompt:
+    id: "system_prompt_v1"
+    version: "1.0.0"
+    description: "Main system prompt for the Enterprise Knowledge Agent"
+    template: |
+      You are an Enterprise AI Knowledge Assistant for {organization_name}.
+      You help business users find information from internal enterprise documents.
+
+      RULES:
+      1. Only answer based on retrieved context. Never fabricate information.
+      2. Always cite your sources with document name and section.
+      3. If you cannot find relevant information, say so clearly.
+      4. Respect department boundaries - only reference documents the user has access to.
+      5. Never disclose raw document content verbatim unless specifically asked.
+      6. For numerical data, always reference the source document and date.
+
+      USER DEPARTMENT: {user_department}
+      ACCESSIBLE DEPARTMENTS: {accessible_departments}
+
+  classification_prompt:
+    id: "classification_v1"
+    version: "1.0.0"
+    description: "Document classification prompt"
+    template: |
+      Classify the following document into one of these departments:
+      {department_list}
+
+      Also determine:
+      - Document type (policy, report, memo, contract, procedure, manual, form, correspondence)
+      - Sensitivity level (public, internal, confidential, restricted)
+      - Key topics (up to 5)
+
+      Document content (first 2000 chars):
+      {document_preview}
+
+      Respond in JSON format:
+      {{"department": "...", "document_type": "...", "sensitivity": "...", "topics": [...]}}
+
+  groundedness_check:
+    id: "groundedness_v1"
+    version: "1.0.0"
+    description: "Validates response groundedness against context"
+    template: |
+      Given the following CONTEXT and RESPONSE, evaluate whether every claim
+      in the RESPONSE is supported by the CONTEXT.
+
+      CONTEXT:
+      {context}
+
+      RESPONSE:
+      {response}
+
+      For each claim in the response, determine if it is:
+      - SUPPORTED: directly stated or clearly implied by the context
+      - UNSUPPORTED: not found in the context
+      - PARTIALLY_SUPPORTED: partially implied but not complete
+
+      Return a JSON object:
+      {{"overall_score": 0.0-1.0, "claims": [{{"claim": "...", "verdict": "...", "evidence": "..."}}]}}

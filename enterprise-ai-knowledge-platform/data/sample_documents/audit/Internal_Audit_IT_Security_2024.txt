@@ -1,0 +1,49 @@
+INTERNAL AUDIT REPORT
+SUBJECT: IT Security Controls Assessment
+AUDIT PERIOD: July 1, 2024 - December 31, 2024
+REPORT DATE: February 10, 2025
+
+AUDIT OPINION: Satisfactory with Observations
+
+SCOPE
+This audit assessed the effectiveness of IT security controls across:
+- Network security and segmentation
+- Identity and access management (IAM)
+- Vulnerability management
+- Incident response capabilities
+- Third-party security governance
+
+KEY FINDINGS
+
+FINDING 1 (Medium Risk): Privileged Account Management
+Observation: 12% of privileged accounts lack multi-factor authentication.
+Impact: Increased risk of unauthorized access to critical systems.
+Recommendation: Enforce MFA for all privileged accounts within 30 days.
+Management Response: Accepted. MFA enrollment campaign initiated.
+Target Date: March 31, 2025
+
+FINDING 2 (Low Risk): Patch Management SLA
+Observation: Critical patches applied within 15 days on average (SLA: 7 days).
+Impact: Extended window of vulnerability exposure.
+Recommendation: Implement automated patching for standard configurations.
+Management Response: Accepted. Automation project approved.
+Target Date: June 30, 2025
+
+FINDING 3 (Medium Risk): Third-Party Security Assessment
+Observation: 4 of 23 critical vendors lack current SOC 2 reports.
+Impact: Unverified security controls at key suppliers.
+Recommendation: Suspend data sharing until reports are obtained.
+Management Response: Partially accepted. Obtaining reports by April 2025.
+Target Date: April 30, 2025
+
+TOTAL RECOMMENDATIONS: 8
+HIGH RISK: 0
+MEDIUM RISK: 5
+LOW RISK: 3
+
+Audit Type: IT Security
+Audit Period: H2 2024
+Finding Severity: Medium
+Recommendation Count: 8
+Auditee: IT Department
+Audit Opinion: Satisfactory with Observations
