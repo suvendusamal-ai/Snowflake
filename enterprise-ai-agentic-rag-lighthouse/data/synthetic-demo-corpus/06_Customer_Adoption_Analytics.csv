@@ -1,0 +1,301 @@
+CUSTOMER_ID,PRIMARY_PLATFORM,REGION,INDUSTRY,AI_ADOPTION_PCT,RAG_ADOPTION_PCT,AGENTIC_AI_ADOPTION_PCT,ANNUAL_PLATFORM_SPEND_USD,ADOPTION_STAGE
+CUST-0001,Snowflake,APAC,BFSI,72,42,22,3385857,Evaluation
+CUST-0002,Microsoft,Europe,BFSI,75,47,23,3477159,Evaluation
+CUST-0003,Microsoft,North America,Manufacturing,70,48,17,1488054,Scaling
+CUST-0004,Microsoft,North America,Healthcare,64,43,16,1770994,Production
+CUST-0005,Databricks,Middle East & Africa,BFSI,83,63,38,2329401,Pilot
+CUST-0006,Snowflake,Europe,BFSI,75,61,39,5168076,Production
+CUST-0007,AWS,APAC,Healthcare,70,54,28,4180399,Production
+CUST-0008,Snowflake,Europe,Retail,79,47,18,5939759,Pilot
+CUST-0009,Snowflake,Europe,BFSI,79,54,14,5500532,Scaling
+CUST-0010,Microsoft,Middle East & Africa,Healthcare,53,45,22,1071511,Pilot
+CUST-0011,Microsoft,Middle East & Africa,Manufacturing,78,48,31,3179776,Production
+CUST-0012,Databricks,Europe,BFSI,69,53,30,2677419,Production
+CUST-0013,AWS,APAC,Healthcare,85,47,25,4169834,Scaling
+CUST-0014,Databricks,North America,Manufacturing,72,46,14,268660,Scaling
+CUST-0015,Google Cloud,North America,Retail,69,53,26,1128825,Pilot
+CUST-0016,Snowflake,APAC,BFSI,65,46,13,2337139,Scaling
+CUST-0017,Microsoft,North America,Retail,79,45,24,4653547,Pilot
+CUST-0018,Snowflake,APAC,Retail,77,56,27,5795086,Pilot
+CUST-0019,Databricks,APAC,Healthcare,64,37,12,2193991,Pilot
+CUST-0020,Snowflake,North America,BFSI,76,60,16,637551,Production
+CUST-0021,Databricks,Europe,BFSI,73,53,28,5323702,Evaluation
+CUST-0022,Microsoft,Middle East & Africa,Healthcare,81,49,14,2728544,Evaluation
+CUST-0023,AWS,North America,BFSI,80,66,19,1351642,Evaluation
+CUST-0024,Microsoft,APAC,Retail,75,53,31,683463,Production
+CUST-0025,Microsoft,North America,BFSI,87,52,23,1479046,Evaluation
+CUST-0026,Google Cloud,Middle East & Africa,Retail,55,30,12,5577478,Evaluation
+CUST-0027,AWS,Europe,Healthcare,68,38,20,600506,Scaling
+CUST-0028,Microsoft,Europe,Healthcare,76,43,19,5145219,Production
+CUST-0029,Snowflake,Middle East & Africa,Retail,87,55,26,3811443,Evaluation
+CUST-0030,Snowflake,APAC,Manufacturing,86,53,28,1622444,Evaluation
+CUST-0031,Microsoft,Middle East & Africa,Manufacturing,63,36,15,5991113,Production
+CUST-0032,Microsoft,APAC,Retail,85,50,19,645550,Pilot
+CUST-0033,AWS,Middle East & Africa,Retail,73,55,35,4010363,Production
+CUST-0034,Snowflake,North America,Manufacturing,58,50,15,913714,Production
+CUST-0035,Databricks,APAC,Retail,74,49,25,5154248,Evaluation
+CUST-0036,Microsoft,North America,BFSI,76,58,33,503498,Scaling
+CUST-0037,Databricks,Europe,Manufacturing,75,52,13,682652,Pilot
+CUST-0038,Snowflake,Europe,Manufacturing,59,41,10,2346746,Production
+CUST-0039,Google Cloud,Europe,Retail,59,44,26,5849562,Pilot
+CUST-0040,Google Cloud,Europe,Retail,55,49,28,5318143,Production
+CUST-0041,Microsoft,Middle East & Africa,Manufacturing,76,63,22,4777403,Production
+CUST-0042,AWS,Middle East & Africa,BFSI,47,29,16,2896743,Scaling
+CUST-0043,Databricks,Europe,Retail,82,54,32,5809612,Scaling
+CUST-0044,AWS,APAC,Healthcare,66,57,16,5829803,Pilot
+CUST-0045,Snowflake,North America,Manufacturing,80,64,24,3735700,Production
+CUST-0046,AWS,APAC,Retail,72,40,16,3239542,Pilot
+CUST-0047,AWS,APAC,BFSI,55,32,19,3165954,Evaluation
+CUST-0048,AWS,Europe,Manufacturing,55,33,17,2430085,Pilot
+CUST-0049,Snowflake,Middle East & Africa,Manufacturing,71,46,19,3584912,Scaling
+CUST-0050,AWS,Europe,Healthcare,65,47,26,5769034,Pilot
+CUST-0051,Snowflake,APAC,Manufacturing,92,58,21,4887736,Pilot
+CUST-0052,Microsoft,Middle East & Africa,Retail,83,63,35,2868642,Pilot
+CUST-0053,Databricks,Middle East & Africa,Healthcare,71,56,33,5197533,Production
+CUST-0054,Databricks,Europe,Retail,79,65,34,2921161,Pilot
+CUST-0055,Google Cloud,Middle East & Africa,BFSI,71,52,24,2074463,Evaluation
+CUST-0056,Snowflake,Middle East & Africa,Healthcare,80,69,37,2979378,Scaling
+CUST-0057,Databricks,Middle East & Africa,Manufacturing,70,40,14,1812361,Scaling
+CUST-0058,Google Cloud,Europe,BFSI,58,34,13,1128630,Pilot
+CUST-0059,Microsoft,APAC,Healthcare,60,37,15,5452821,Production
+CUST-0060,Databricks,Middle East & Africa,Healthcare,73,40,15,4582481,Evaluation
+CUST-0061,Snowflake,Middle East & Africa,Retail,74,41,15,4155065,Evaluation
+CUST-0062,Databricks,Europe,Healthcare,86,76,35,5464840,Production
+CUST-0063,Microsoft,Europe,Healthcare,74,47,17,2864521,Scaling
+CUST-0064,Databricks,APAC,Healthcare,71,57,33,1700561,Production
+CUST-0065,AWS,APAC,BFSI,66,58,15,428422,Pilot
+CUST-0066,Microsoft,Europe,BFSI,73,46,20,907739,Pilot
+CUST-0067,AWS,APAC,Manufacturing,72,58,17,4960981,Scaling
+CUST-0068,Microsoft,APAC,BFSI,81,60,36,2408015,Pilot
+CUST-0069,Microsoft,North America,Retail,67,52,29,4828306,Production
+CUST-0070,AWS,APAC,Healthcare,57,32,16,322749,Evaluation
+CUST-0071,Databricks,Middle East & Africa,BFSI,89,74,39,2754051,Scaling
+CUST-0072,Snowflake,Middle East & Africa,Healthcare,68,47,25,1793274,Pilot
+CUST-0073,Databricks,APAC,BFSI,81,57,28,2429188,Production
+CUST-0074,AWS,Europe,Manufacturing,60,43,16,1735526,Scaling
+CUST-0075,Databricks,North America,Manufacturing,69,43,17,3442263,Pilot
+CUST-0076,Snowflake,Middle East & Africa,Healthcare,71,58,16,1524179,Pilot
+CUST-0077,AWS,Middle East & Africa,Manufacturing,57,51,23,2272910,Evaluation
+CUST-0078,AWS,Europe,Manufacturing,62,36,11,937439,Pilot
+CUST-0079,Microsoft,APAC,Healthcare,65,47,17,828025,Pilot
+CUST-0080,AWS,Europe,Manufacturing,38,24,12,977852,Production
+CUST-0081,Google Cloud,Europe,Manufacturing,53,31,7,1884951,Evaluation
+CUST-0082,AWS,North America,Retail,53,33,19,906001,Production
+CUST-0083,AWS,North America,BFSI,76,67,19,1677097,Evaluation
+CUST-0084,Snowflake,Middle East & Africa,Retail,86,60,25,5195958,Evaluation
+CUST-0085,AWS,North America,BFSI,72,44,22,1153078,Pilot
+CUST-0086,Snowflake,North America,Retail,69,47,24,2951996,Production
+CUST-0087,Microsoft,Middle East & Africa,Manufacturing,76,48,27,3641290,Pilot
+CUST-0088,AWS,Europe,Retail,69,59,34,660606,Pilot
+CUST-0089,Databricks,Middle East & Africa,Manufacturing,86,68,42,3127715,Evaluation
+CUST-0090,AWS,Middle East & Africa,BFSI,76,61,29,398723,Pilot
+CUST-0091,Google Cloud,APAC,BFSI,48,29,13,2792819,Scaling
+CUST-0092,Microsoft,Middle East & Africa,Healthcare,62,55,24,2598001,Scaling
+CUST-0093,Snowflake,APAC,Retail,62,48,19,4622873,Production
+CUST-0094,AWS,APAC,Manufacturing,72,47,29,2574006,Production
+CUST-0095,Snowflake,Middle East & Africa,Healthcare,83,63,28,2791735,Production
+CUST-0096,Microsoft,APAC,Retail,74,52,27,948199,Pilot
+CUST-0097,Snowflake,North America,Manufacturing,67,60,36,2903325,Production
+CUST-0098,Snowflake,Middle East & Africa,Retail,70,61,22,4306116,Evaluation
+CUST-0099,Databricks,Europe,Healthcare,70,43,21,4541182,Pilot
+CUST-0100,Databricks,Middle East & Africa,Manufacturing,77,51,28,1786242,Production
+CUST-0101,AWS,Middle East & Africa,Manufacturing,73,52,19,4636517,Evaluation
+CUST-0102,AWS,Europe,Manufacturing,57,50,17,2452082,Evaluation
+CUST-0103,Microsoft,Middle East & Africa,Healthcare,58,48,30,3098139,Production
+CUST-0104,Microsoft,North America,Manufacturing,79,67,28,3274218,Evaluation
+CUST-0105,Microsoft,Middle East & Africa,Retail,88,50,28,1773880,Evaluation
+CUST-0106,Snowflake,Middle East & Africa,Manufacturing,52,45,22,5352772,Evaluation
+CUST-0107,Databricks,North America,BFSI,77,50,17,769681,Production
+CUST-0108,Databricks,Middle East & Africa,BFSI,91,55,20,416446,Scaling
+CUST-0109,Databricks,APAC,Manufacturing,72,52,24,4806986,Pilot
+CUST-0110,Microsoft,Europe,Healthcare,73,52,25,1585083,Scaling
+CUST-0111,AWS,Middle East & Africa,BFSI,78,47,20,2237002,Scaling
+CUST-0112,Snowflake,APAC,Healthcare,63,44,16,5996398,Evaluation
+CUST-0113,Microsoft,APAC,Healthcare,42,27,17,4034821,Scaling
+CUST-0114,Microsoft,Middle East & Africa,BFSI,55,46,28,4710510,Pilot
+CUST-0115,Snowflake,Europe,Manufacturing,62,48,25,4040293,Pilot
+CUST-0116,Snowflake,APAC,BFSI,61,50,13,2347952,Pilot
+CUST-0117,Microsoft,APAC,Manufacturing,69,41,19,5836065,Scaling
+CUST-0118,Databricks,Middle East & Africa,Manufacturing,69,61,22,5254782,Production
+CUST-0119,AWS,Europe,BFSI,66,51,26,2535116,Scaling
+CUST-0120,Microsoft,North America,Healthcare,62,39,11,2369367,Scaling
+CUST-0121,Snowflake,North America,Manufacturing,66,50,31,2136036,Pilot
+CUST-0122,Snowflake,APAC,Healthcare,61,47,13,510744,Production
+CUST-0123,AWS,North America,Healthcare,83,49,21,4105295,Evaluation
+CUST-0124,Snowflake,Middle East & Africa,Retail,83,64,37,3790000,Scaling
+CUST-0125,Microsoft,Europe,Manufacturing,47,39,11,4192661,Scaling
+CUST-0126,Microsoft,Europe,Manufacturing,78,69,43,4989098,Production
+CUST-0127,Snowflake,North America,BFSI,73,43,20,644508,Pilot
+CUST-0128,Snowflake,APAC,Retail,64,52,29,3676894,Scaling
+CUST-0129,Databricks,Europe,Retail,58,34,20,1007868,Scaling
+CUST-0130,Databricks,APAC,Retail,71,39,13,978861,Evaluation
+CUST-0131,Snowflake,Middle East & Africa,BFSI,63,47,20,1523911,Production
+CUST-0132,Databricks,Middle East & Africa,Manufacturing,79,61,16,5991873,Evaluation
+CUST-0133,AWS,Middle East & Africa,BFSI,63,54,20,1102919,Pilot
+CUST-0134,AWS,Middle East & Africa,Manufacturing,55,49,22,2858863,Evaluation
+CUST-0135,Microsoft,Europe,BFSI,51,35,20,2542698,Production
+CUST-0136,AWS,APAC,Manufacturing,74,50,15,5557163,Production
+CUST-0137,Microsoft,North America,BFSI,54,36,10,594890,Scaling
+CUST-0138,Snowflake,APAC,Healthcare,78,66,41,2681886,Production
+CUST-0139,Google Cloud,APAC,Manufacturing,73,44,19,5121830,Scaling
+CUST-0140,Databricks,North America,Manufacturing,83,67,32,4891522,Production
+CUST-0141,Snowflake,North America,Manufacturing,78,51,19,285108,Pilot
+CUST-0142,Snowflake,North America,Healthcare,86,51,25,426278,Pilot
+CUST-0143,AWS,APAC,Healthcare,70,46,28,3678286,Production
+CUST-0144,Microsoft,North America,BFSI,77,49,25,3042554,Evaluation
+CUST-0145,AWS,North America,Retail,63,49,23,3279871,Scaling
+CUST-0146,Microsoft,North America,Healthcare,74,40,14,1464595,Pilot
+CUST-0147,Databricks,APAC,Manufacturing,84,58,17,3312348,Pilot
+CUST-0148,Snowflake,North America,Manufacturing,80,55,30,2758262,Evaluation
+CUST-0149,Google Cloud,Middle East & Africa,Manufacturing,49,34,10,369925,Scaling
+CUST-0150,Microsoft,APAC,Healthcare,63,36,21,1649069,Evaluation
+CUST-0151,Snowflake,APAC,Healthcare,71,58,16,3891041,Pilot
+CUST-0152,Google Cloud,APAC,Manufacturing,56,45,25,4936462,Pilot
+CUST-0153,Microsoft,Europe,Manufacturing,72,58,16,5719929,Evaluation
+CUST-0154,AWS,APAC,Healthcare,71,60,30,1118005,Production
+CUST-0155,AWS,APAC,Manufacturing,58,33,14,466241,Scaling
+CUST-0156,Databricks,North America,BFSI,70,53,23,2910592,Production
+CUST-0157,AWS,APAC,Retail,56,49,21,4913059,Scaling
+CUST-0158,Google Cloud,Europe,BFSI,56,31,16,5948169,Pilot
+CUST-0159,AWS,Middle East & Africa,Manufacturing,58,44,24,3972005,Production
+CUST-0160,AWS,APAC,Healthcare,70,44,25,5795357,Pilot
+CUST-0161,AWS,APAC,Retail,60,46,13,4325795,Production
+CUST-0162,AWS,APAC,Healthcare,79,65,33,5016514,Production
+CUST-0163,Snowflake,APAC,Healthcare,80,70,27,4655398,Pilot
+CUST-0164,Microsoft,Europe,Retail,70,40,23,831559,Production
+CUST-0165,Snowflake,Middle East & Africa,Retail,75,59,29,5440271,Evaluation
+CUST-0166,Microsoft,Europe,Manufacturing,75,66,32,4576249,Evaluation
+CUST-0167,Microsoft,APAC,Retail,87,75,24,4150264,Evaluation
+CUST-0168,AWS,Middle East & Africa,Manufacturing,62,45,18,1181834,Pilot
+CUST-0169,Databricks,APAC,Retail,86,58,36,4340555,Production
+CUST-0170,AWS,APAC,Retail,69,48,21,5028518,Production
+CUST-0171,Google Cloud,Middle East & Africa,Retail,81,56,22,2400278,Evaluation
+CUST-0172,Google Cloud,Europe,Manufacturing,48,26,16,5075263,Scaling
+CUST-0173,Databricks,North America,Retail,71,56,17,4306833,Evaluation
+CUST-0174,Snowflake,North America,BFSI,90,57,33,3405624,Evaluation
+CUST-0175,Microsoft,Europe,Manufacturing,69,48,27,2878403,Production
+CUST-0176,Databricks,North America,Healthcare,78,60,28,4381629,Scaling
+CUST-0177,AWS,Europe,Manufacturing,60,47,21,2323471,Production
+CUST-0178,AWS,North America,Healthcare,63,48,30,1708489,Production
+CUST-0179,AWS,APAC,BFSI,66,38,18,4600903,Pilot
+CUST-0180,Microsoft,Europe,Manufacturing,84,70,36,5889710,Evaluation
+CUST-0181,Snowflake,North America,Retail,66,37,12,4798877,Production
+CUST-0182,AWS,Middle East & Africa,Manufacturing,42,37,17,1706554,Pilot
+CUST-0183,AWS,APAC,BFSI,63,44,18,2778485,Evaluation
+CUST-0184,AWS,Middle East & Africa,Retail,83,65,25,4834422,Scaling
+CUST-0185,Databricks,North America,Healthcare,46,28,10,839937,Scaling
+CUST-0186,Snowflake,Middle East & Africa,Manufacturing,85,64,26,4216147,Scaling
+CUST-0187,AWS,Middle East & Africa,Manufacturing,61,53,14,3915697,Scaling
+CUST-0188,Snowflake,North America,Retail,95,56,27,4742543,Production
+CUST-0189,Microsoft,APAC,Retail,54,30,9,2837054,Scaling
+CUST-0190,AWS,Europe,BFSI,84,61,24,3984974,Pilot
+CUST-0191,Google Cloud,Europe,BFSI,54,40,14,1746666,Evaluation
+CUST-0192,Microsoft,Middle East & Africa,Manufacturing,70,43,13,675799,Pilot
+CUST-0193,Google Cloud,North America,Healthcare,73,65,33,4329857,Scaling
+CUST-0194,Google Cloud,Europe,Retail,39,32,14,947834,Pilot
+CUST-0195,Databricks,Middle East & Africa,Retail,88,59,33,3421969,Production
+CUST-0196,Microsoft,Middle East & Africa,Healthcare,72,52,28,4984201,Production
+CUST-0197,Microsoft,North America,Manufacturing,55,36,21,4736511,Pilot
+CUST-0198,Databricks,Middle East & Africa,Retail,80,58,34,5030497,Pilot
+CUST-0199,AWS,APAC,Retail,72,63,28,1883277,Production
+CUST-0200,Microsoft,Europe,Manufacturing,67,51,25,787213,Pilot
+CUST-0201,Snowflake,Europe,Retail,63,47,27,3490803,Production
+CUST-0202,Microsoft,Europe,Manufacturing,56,45,18,3924199,Evaluation
+CUST-0203,Databricks,APAC,Manufacturing,58,45,16,669594,Production
+CUST-0204,Microsoft,Middle East & Africa,Healthcare,71,50,19,1076094,Scaling
+CUST-0205,Databricks,Middle East & Africa,Manufacturing,82,61,23,2932217,Scaling
+CUST-0206,AWS,North America,Retail,73,41,25,5218942,Evaluation
+CUST-0207,Microsoft,APAC,Retail,84,51,16,5976824,Evaluation
+CUST-0208,AWS,Middle East & Africa,Manufacturing,59,32,20,3156305,Pilot
+CUST-0209,Microsoft,North America,Manufacturing,81,69,35,2955874,Production
+CUST-0210,Databricks,Europe,Healthcare,79,67,36,4642176,Scaling
+CUST-0211,Microsoft,Europe,BFSI,64,43,18,3411678,Production
+CUST-0212,Microsoft,Middle East & Africa,BFSI,76,51,32,3457533,Scaling
+CUST-0213,Databricks,Middle East & Africa,Retail,72,43,16,2974028,Evaluation
+CUST-0214,Microsoft,APAC,Retail,69,60,22,2509488,Scaling
+CUST-0215,Snowflake,APAC,Healthcare,70,46,13,2645106,Scaling
+CUST-0216,Databricks,Middle East & Africa,BFSI,76,48,24,5839326,Pilot
+CUST-0217,Databricks,Europe,Healthcare,60,49,19,4974552,Pilot
+CUST-0218,Microsoft,Europe,BFSI,67,37,13,1120729,Pilot
+CUST-0219,AWS,North America,Healthcare,62,46,29,3000633,Evaluation
+CUST-0220,AWS,Middle East & Africa,Retail,54,46,17,2287150,Scaling
+CUST-0221,Snowflake,Europe,Retail,70,61,39,4684252,Pilot
+CUST-0222,Snowflake,APAC,Healthcare,80,57,27,5623290,Scaling
+CUST-0223,AWS,Middle East & Africa,Healthcare,76,63,23,1903874,Production
+CUST-0224,AWS,APAC,Healthcare,43,34,11,5010722,Scaling
+CUST-0225,Google Cloud,Europe,Manufacturing,76,48,12,5454809,Pilot
+CUST-0226,Snowflake,North America,BFSI,82,56,30,828133,Pilot
+CUST-0227,Microsoft,Middle East & Africa,Retail,58,41,20,4596488,Scaling
+CUST-0228,AWS,North America,BFSI,49,38,13,4497447,Production
+CUST-0229,Google Cloud,Middle East & Africa,Retail,68,59,38,2532718,Evaluation
+CUST-0230,Microsoft,North America,Manufacturing,65,35,16,866978,Scaling
+CUST-0231,AWS,Europe,Healthcare,72,44,12,1184342,Evaluation
+CUST-0232,Snowflake,North America,Retail,62,50,28,3514742,Pilot
+CUST-0233,Microsoft,Middle East & Africa,Healthcare,65,50,16,1058518,Scaling
+CUST-0234,Google Cloud,APAC,BFSI,63,43,18,1785217,Scaling
+CUST-0235,AWS,APAC,BFSI,57,32,9,2014136,Evaluation
+CUST-0236,Snowflake,North America,Manufacturing,59,45,28,2363377,Pilot
+CUST-0237,Microsoft,Middle East & Africa,Retail,79,60,24,3408098,Evaluation
+CUST-0238,Databricks,Europe,Retail,89,70,34,4777381,Evaluation
+CUST-0239,Snowflake,North America,Manufacturing,76,63,38,1412401,Pilot
+CUST-0240,Microsoft,North America,Healthcare,67,52,27,3060760,Evaluation
+CUST-0241,Databricks,Europe,Healthcare,64,36,15,4889763,Production
+CUST-0242,AWS,Europe,BFSI,65,48,12,2231040,Production
+CUST-0243,Snowflake,North America,BFSI,83,53,17,1028715,Evaluation
+CUST-0244,AWS,Middle East & Africa,Healthcare,65,55,33,2409961,Pilot
+CUST-0245,Snowflake,North America,Manufacturing,77,56,30,1530468,Production
+CUST-0246,Databricks,Middle East & Africa,Manufacturing,87,68,31,3308618,Pilot
+CUST-0247,Microsoft,Europe,Manufacturing,66,53,15,4904499,Evaluation
+CUST-0248,Snowflake,Europe,BFSI,95,59,17,443063,Production
+CUST-0249,Microsoft,Middle East & Africa,BFSI,58,47,26,1055779,Scaling
+CUST-0250,Microsoft,APAC,Manufacturing,74,46,27,5917749,Pilot
+CUST-0251,AWS,North America,Manufacturing,53,42,13,4152813,Evaluation
+CUST-0252,Microsoft,Middle East & Africa,Manufacturing,65,53,20,2643866,Pilot
+CUST-0253,AWS,Middle East & Africa,Retail,66,56,17,2912394,Production
+CUST-0254,Snowflake,Europe,Healthcare,79,54,19,2149012,Production
+CUST-0255,Google Cloud,North America,Manufacturing,45,25,10,3728574,Production
+CUST-0256,Databricks,Europe,Retail,71,50,29,2164544,Production
+CUST-0257,Microsoft,North America,Retail,69,60,31,4296669,Evaluation
+CUST-0258,Google Cloud,APAC,Manufacturing,47,32,14,2315742,Scaling
+CUST-0259,AWS,Middle East & Africa,Healthcare,88,62,36,5507400,Scaling
+CUST-0260,AWS,Europe,BFSI,82,66,16,3431541,Evaluation
+CUST-0261,AWS,APAC,Retail,67,42,19,5674921,Scaling
+CUST-0262,Microsoft,Middle East & Africa,Healthcare,82,58,31,2275012,Pilot
+CUST-0263,Databricks,Europe,Healthcare,86,66,18,444486,Production
+CUST-0264,Google Cloud,North America,BFSI,57,39,22,1580742,Pilot
+CUST-0265,Microsoft,APAC,Healthcare,83,72,44,4040884,Production
+CUST-0266,Microsoft,North America,Healthcare,75,41,22,3330494,Scaling
+CUST-0267,Microsoft,Europe,Healthcare,73,43,14,3277121,Scaling
+CUST-0268,Microsoft,North America,Healthcare,72,49,20,3498762,Pilot
+CUST-0269,AWS,North America,BFSI,74,55,14,304338,Pilot
+CUST-0270,Microsoft,APAC,Healthcare,75,56,33,798330,Production
+CUST-0271,Microsoft,APAC,Healthcare,73,63,38,3490181,Production
+CUST-0272,Microsoft,North America,Manufacturing,71,62,30,4575463,Evaluation
+CUST-0273,Google Cloud,Europe,Manufacturing,52,44,22,3358233,Evaluation
+CUST-0274,Databricks,North America,Retail,70,50,31,558754,Evaluation
+CUST-0275,Microsoft,APAC,BFSI,59,44,28,2126665,Scaling
+CUST-0276,Databricks,Middle East & Africa,Healthcare,67,42,19,2408705,Pilot
+CUST-0277,Snowflake,North America,Healthcare,73,46,12,1790839,Evaluation
+CUST-0278,Databricks,Middle East & Africa,Retail,67,44,12,279872,Scaling
+CUST-0279,AWS,North America,Manufacturing,70,49,23,2596254,Production
+CUST-0280,Microsoft,APAC,BFSI,74,63,16,2629407,Production
+CUST-0281,Databricks,Europe,Retail,73,47,16,1089125,Pilot
+CUST-0282,AWS,APAC,Healthcare,60,43,12,1697273,Pilot
+CUST-0283,Databricks,Europe,Healthcare,70,38,15,5089276,Evaluation
+CUST-0284,Databricks,Middle East & Africa,Manufacturing,77,51,29,5192173,Pilot
+CUST-0285,AWS,Middle East & Africa,Retail,55,48,17,4246007,Evaluation
+CUST-0286,Google Cloud,APAC,Retail,87,59,34,2509376,Production
+CUST-0287,Google Cloud,Europe,Retail,58,51,22,4323110,Evaluation
+CUST-0288,Databricks,Middle East & Africa,BFSI,64,50,15,1991287,Scaling
+CUST-0289,Snowflake,Middle East & Africa,Healthcare,95,68,27,3163022,Evaluation
+CUST-0290,Snowflake,North America,Manufacturing,85,50,17,4071989,Pilot
+CUST-0291,Snowflake,Middle East & Africa,BFSI,80,66,19,816987,Pilot
+CUST-0292,Snowflake,Middle East & Africa,Retail,70,47,20,4157444,Pilot
+CUST-0293,AWS,Middle East & Africa,BFSI,74,65,19,5658887,Pilot
+CUST-0294,AWS,Middle East & Africa,Manufacturing,72,59,27,2252726,Production
+CUST-0295,AWS,APAC,Healthcare,68,54,13,2222698,Production
+CUST-0296,Snowflake,Europe,Retail,73,53,24,2153190,Evaluation
+CUST-0297,Google Cloud,Middle East & Africa,Retail,59,46,18,4489983,Pilot
+CUST-0298,AWS,Middle East & Africa,Healthcare,61,33,11,1850482,Production
+CUST-0299,Snowflake,APAC,Retail,66,42,24,3284361,Scaling
+CUST-0300,Snowflake,North America,Healthcare,81,54,31,3799835,Scaling
