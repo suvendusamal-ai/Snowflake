@@ -1,0 +1,100 @@
+flowchart TB
+    subgraph experience[Experience]
+        user[Executive / User]
+        boundary[Future API / Streamlit Boundary]
+        user --> boundary
+    end
+
+    subgraph control[Enterprise Agent Control Plane]
+        agent[Enterprise KPI Agent]
+        context[User and Session Context]
+        intent[Intent Resolver]
+        candidates[KPI Candidate Resolution]
+        entitlement[Entitlement Validation]
+        certification[Effective CERTIFIED Version Filter; excludes DRAFT, UNDER_REVIEW, DEPRECATED, and ineffective versions]
+        ambiguity{Ambiguity Detector}
+        router[Domain and Tool Router]
+        clarify[CLARIFY; no analytical execution]
+        notfound[Not Found / Clarify]
+
+        agent --> context --> intent --> candidates --> entitlement --> certification --> ambiguity
+        ambiguity -->|One valid candidate| router
+        ambiguity -->|Multiple legitimate candidates| clarify
+        ambiguity -->|Zero candidates| notfound
+        clarify --> boundary
+        notfound --> boundary
+    end
+
+    boundary --> agent
+
+    subgraph analytics[Structured Analytics]
+        salesCapability[Sales Analyst Capability]
+        financeCapability[Finance Analyst Capability]
+        cortexAnalyst[Cortex Analyst]
+        salesCapability --> cortexAnalyst
+        financeCapability --> cortexAnalyst
+    end
+
+    subgraph knowledge[Knowledge]
+        kpiKnowledge[KPI Knowledge Capability]
+        cortexSearch[Cortex Search]
+        kpiKnowledge --> cortexSearch
+    end
+
+    router --> salesCapability
+    router --> financeCapability
+    router --> kpiKnowledge
+
+    subgraph data[Quantitative Trust and Data Flow]
+        raw[Raw / Source Data in Snowflake]
+        staging[dbt Staging]
+        intermediate[dbt Intermediate]
+        salesMart[Sales Mart]
+        financeMart[Finance Mart]
+        salesView[Sales Semantic View: SALES_BOOKINGS]
+        financeView[Finance Semantic View: RECOGNIZED_REVENUE]
+
+        raw --> staging --> intermediate
+        intermediate --> salesMart --> salesView
+        intermediate --> financeMart --> financeView
+    end
+
+    salesView --> cortexAnalyst
+    financeView --> cortexAnalyst
+    cortexAnalyst -->|Governed quantitative result| agent
+
+    subgraph governance[Semantic Governance and Knowledge]
+        registry[Certified KPI Registry]
+        definitions[Governed Definitions and Decision Provenance]
+        governedKnowledge[Governed KPI Knowledge]
+        definitions -. governance content .-> registry
+        definitions --> governedKnowledge
+    end
+
+    registry -. authoritative candidate metadata .-> candidates
+    registry -. status and effective version .-> certification
+    registry -. governs / certifies .-> salesView
+    registry -. governs / certifies .-> financeView
+    governedKnowledge --> cortexSearch
+    cortexSearch -->|Governed knowledge result| agent
+
+    subgraph snowflake[Snowflake Controls]
+        rbac[RBAC]
+        policies[Row Access and Masking]
+        audit[Metadata / Audit / Monitoring]
+    end
+
+    rbac -. enforces .-> entitlement
+    rbac -. protects .-> data
+    policies -. protects .-> data
+    audit -. observes .-> control
+    audit -. observes .-> data
+    audit -. observes .-> governance
+
+    airflow[Airflow] -. future scheduled orchestration .-> raw
+    cicd[Git / Codex / CI-CD] -. controlled delivery .-> control
+    cicd -. controlled delivery .-> data
+    cicd -. controlled delivery .-> governance
+
+    grounding[Grounding hierarchy: certified Semantic Views / trusted marts for quantitative truth; certified KPI registry for definition, ownership, status and version; governed KPI knowledge for rationale, policy and provenance; bounded conversation context for references; general model knowledge is non-authoritative for enterprise KPI facts]
+    grounding -. constrains .-> agent

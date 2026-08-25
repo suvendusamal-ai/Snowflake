@@ -1,0 +1,65 @@
+flowchart TB
+    users[Enterprise Users] --> agent[Enterprise KPI Agent]
+
+    subgraph control[Request and Control Plane]
+        agent --> context[User / Identity Context]
+        context --> intent[Intent Resolution]
+        intent --> candidates[KPI Candidate Resolution]
+        candidates --> entitlement[Authorization / Entitlement Filter]
+        entitlement --> certification[Effective CERTIFIED Version Filter; excludes DRAFT, UNDER_REVIEW, DEPRECATED, and ineffective versions]
+        certification --> ambiguity{Ambiguity Control}
+        ambiguity -->|Zero authoritative candidates| notfound[Not Found / Clarify]
+        ambiguity -->|One authoritative candidate| routing[Domain / Tool Routing]
+        ambiguity -->|Multiple legitimate authoritative candidates| clarify[Clarify; no analytical execution]
+    end
+
+    routing -->|Quantitative request| analyst[Cortex Analyst]
+    routing -->|Definition / rationale request| search[Cortex Search]
+
+    subgraph data[Quantitative Trust and Data Flow]
+        raw[Raw / Source Data in Snowflake]
+        staging[dbt Staging]
+        intermediate[dbt Intermediate]
+        salesProduct[Sales Mart]
+        financeProduct[Finance Mart]
+        salesView[Bounded Sales Semantic View]
+        financeView[Bounded Finance Semantic View]
+
+        raw --> staging --> intermediate
+        intermediate --> salesProduct --> salesView
+        intermediate --> financeProduct --> financeView
+    end
+
+    salesView --> analyst
+    financeView --> analyst
+    analyst -->|Governed quantitative result| agent
+
+    registry[Certified KPI Registry]
+    definitions[Governed KPI Definitions and Decision Provenance]
+    knowledge[Governed KPI Knowledge]
+
+    registry -. authoritative candidate metadata .-> candidates
+    registry -. status and effective version .-> certification
+    registry -. governs / certifies .-> salesView
+    registry -. governs / certifies .-> financeView
+    definitions -. governance content .-> registry
+    definitions --> knowledge --> search
+    search -->|Governed knowledge result| agent
+
+    subgraph cross[Cross-cutting Controls]
+        security[Security]
+        governance[Governance]
+        provenance[Lineage and Decision Provenance]
+        observability[Observability]
+        evaluation[Evaluation]
+        finops[FinOps]
+    end
+
+    cross -. governs .-> control
+    cross -. governs .-> data
+    cross -. governs .-> registry
+
+    airflow[Airflow] -. scheduled orchestration .-> raw
+    cicd[Git / Codex / CI-CD] -. controlled delivery .-> control
+    cicd -. controlled delivery .-> data
+    cicd -. controlled delivery .-> registry

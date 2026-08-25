@@ -1,0 +1,9 @@
+flowchart TB
+    users[Enterprise Users] --> intelligence[Trusted KPI Intelligence]
+    intelligence --> semantics[Certified Business Semantics]
+    semantics --> data[Trusted Enterprise Data]
+
+    controls[Governance + Security + Audit / Lineage]
+    controls -. governs .-> intelligence
+    controls -. governs .-> semantics
+    controls -. governs .-> data
