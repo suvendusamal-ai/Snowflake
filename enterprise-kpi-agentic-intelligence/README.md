@@ -1,16 +1,29 @@
-# Enterprise KPI Agentic Intelligence
-
-Interview-grade Snowflake lighthouse project for rebuilding trust in enterprise KPIs through governed data products, certified metrics, bounded semantic views, and controlled agent orchestration.
+# Enterprise KPI Trust & Agentic Intelligence Platform
 
 ## Business Problem
 
-Enterprise KPI definitions have drifted across business domains, creating multiple legitimate versions of terms such as `bookings`. The platform must distinguish authorization from intent and must clarify semantic ambiguity rather than guess.
+Organizations lose trust in enterprise reporting when multiple legitimate but conflicting KPI definitions exist, such as Sales Bookings and Finance Revenue Bookings.
 
-## Architecture Objective
+**Authorization tells us what a user can access. Intent resolution tells us what the user means. These are separate concerns.**
 
-`Governed Data → Certified Metrics → Semantic Intelligence → Enterprise Agent → Trusted Answer → Audit/Evidence`
+## Objective
 
-## Technology Stack
+This project will demonstrate: **Governed Data → Certified Metrics → Semantic Intelligence → Enterprise Agent → Ambiguity Resolution → Trusted Answer → Audit/Evidence**
+
+## Flagship Scenario
+
+User asks:
+
+`What were bookings this quarter?`
+
+Two certified metrics are valid:
+
+- `SALES_BOOKINGS`
+- `FINANCE_REVENUE_BOOKINGS`
+
+If the user is authorized for both, the system must ask for clarification rather than arbitrarily selecting one.
+
+## Technology Direction
 
 - Snowflake
 - dbt
@@ -18,22 +31,14 @@ Enterprise KPI definitions have drifted across business domains, creating multip
 - Cortex Analyst
 - Cortex Search
 - Cortex Agents
-- Apache Airflow (later increment)
-- Git / GitHub / Codex
+- Airflow later in the implementation
 
-## Implementation Status
+## Current Status
 
-- I0 — Repository Bootstrap: IN PROGRESS
-- I1–I15: NOT STARTED
+`I0 — Repository Bootstrap`
 
-## Engineering Rule
+Implementation has not started yet.
+
+## Engineering Lifecycle
 
 `DESIGN → BUILD → EXECUTE → VERIFY → EVIDENCE → PASS`
-
-An increment is not complete merely because code exists.
-
-## Flagship Acceptance Scenario
-
-User asks: `What were bookings this quarter?`
-
-If multiple certified and authorized KPI concepts match, the platform must ask for clarification and must not execute an analytical query until the intended KPI is resolved.
