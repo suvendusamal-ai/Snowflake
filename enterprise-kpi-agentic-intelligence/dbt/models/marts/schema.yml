@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: fct_sales_bookings
+    description: Trusted event-level Sales product; downstream SALES_BOOKINGS sums signed amounts by event_date.
+    columns:
+      - name: event_id
+        description: Immutable Sales event identifier retained from RAW.
+      - name: order_id
+      - name: order_line_id
+      - name: customer_id
+      - name: region
+      - name: event_type
+        description: Preserved BOOKING, CANCELLATION, or AMENDMENT semantics.
+      - name: event_date
+        description: Date used for Sales reporting-period attribution.
+      - name: calendar_year
+      - name: calendar_quarter
+      - name: quarter_start_date
+      - name: amount
+        description: Signed event-level amount; not a precomputed KPI.
+      - name: currency
+      - name: source_system
+      - name: source_relation
+      - name: ingestion_timestamp
+
+  - name: fct_recognized_revenue
+    description: Trusted event-level Finance product; downstream RECOGNIZED_REVENUE sums amounts by recognition_date.
+    columns:
+      - name: recognition_event_id
+        description: Immutable Finance recognition event identifier retained from RAW.
+      - name: order_id
+      - name: order_line_id
+      - name: customer_id
+      - name: region
+      - name: recognition_type
+        description: Preserved FULL, PARTIAL, FINAL, or ADJUSTMENT semantics.
+      - name: recognition_date
+        description: Date used for Finance reporting-period attribution.
+      - name: calendar_year
+      - name: calendar_quarter
+      - name: quarter_start_date
+      - name: amount
+        description: Recognition-event amount; not a precomputed KPI.
+      - name: currency
+      - name: source_system
+      - name: source_relation
+      - name: ingestion_timestamp

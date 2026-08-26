@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: stg_sales_order_events
+    description: Tested source boundary preserving one immutable Sales event per row without business transformation.
+    columns:
+      - name: event_id
+        description: Unique immutable Sales event identifier.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests: [not_null]
+      - name: order_line_id
+        tests: [not_null]
+      - name: customer_id
+        tests: [not_null]
+      - name: region
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['AMER', 'EMEA', 'APAC']
+      - name: event_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['BOOKING', 'CANCELLATION', 'AMENDMENT']
+      - name: event_date
+        tests: [not_null]
+      - name: amount
+        tests: [not_null]
+      - name: currency
+        tests: [not_null]
+      - name: source_system
+        tests: [not_null]
+      - name: source_relation
+        tests: [not_null]
+      - name: ingestion_timestamp
+        tests: [not_null]
+
+  - name: stg_revenue_recognition_events
+    description: Tested source boundary preserving one immutable Finance recognition event per row without business transformation.
+    columns:
+      - name: recognition_event_id
+        description: Unique immutable recognition event identifier.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests: [not_null]
+      - name: order_line_id
+        tests: [not_null]
+      - name: customer_id
+        tests: [not_null]
+      - name: region
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['AMER', 'EMEA', 'APAC']
+      - name: recognition_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['FULL', 'PARTIAL', 'FINAL', 'ADJUSTMENT']
+      - name: recognition_date
+        tests: [not_null]
+      - name: amount
+        tests: [not_null]
+      - name: currency
+        tests: [not_null]
+      - name: source_system
+        tests: [not_null]
+      - name: source_relation
+        tests: [not_null]
+      - name: ingestion_timestamp
+        tests: [not_null]

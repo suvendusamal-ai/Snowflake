@@ -1,0 +1,19 @@
+name: enterprise_kpi_trusted
+version: 1.0.0
+config-version: 2
+
+profile: enterprise_kpi_trusted
+
+model-paths: ["models"]
+test-paths: ["tests"]
+clean-targets: ["target", "dbt_packages"]
+
+# The external profile target must set database KPI_INTELLIGENCE_DB and schema TRUSTED.
+# Runtime role KPI_DATA_ENGINEER requires warehouse/database/schema USAGE,
+# explicit SELECT on both RAW event tables, and CREATE VIEW/CREATE TABLE on TRUSTED.
+models:
+  enterprise_kpi_trusted:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

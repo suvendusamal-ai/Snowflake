@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Immutable source events for the lighthouse KPI data products.
+    database: KPI_INTELLIGENCE_DB
+    schema: RAW
+    tables:
+      - name: sales_order_events
+        identifier: SALES_ORDER_EVENTS
+        description: Immutable commercial booking, cancellation, and amendment events.
+      - name: revenue_recognition_events
+        identifier: REVENUE_RECOGNITION_EVENTS
+        description: Immutable Finance recognition and recognition-adjustment events.

@@ -1,0 +1,10 @@
+enterprise_kpi_trusted:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: KPI_DATA_ENGINEER
+      warehouse: KPI_INTELLIGENCE_WH
+      database: KPI_INTELLIGENCE_DB
+      schema: TRUSTED
+      threads: 4
